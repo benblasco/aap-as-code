@@ -1,0 +1,15 @@
+---
+all:
+  children:
+    automationcontroller:
+      hosts:
+        student1.w2bmh.example.opentlc.com:
+
+    automationhub:
+      hosts:
+        hub-student1.w2bmh.example.opentlc.com:
+
+    builder:
+      hosts:
+        student1.w2bmh.example.opentlc.com:
+...

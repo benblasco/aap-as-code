@@ -1,0 +1,13 @@
+---
+controller_organizations:
+  - name: "config_as_code"
+    description: This is the Default Group
+  - name: Automation Group
+    description: This is the Automation Group
+    default_environment: "supported"
+    max_hosts: 0
+    galaxy_credentials:
+      - ah_certified
+      - ah_published
+      - ah_community
+...
