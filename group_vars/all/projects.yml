@@ -3,11 +3,11 @@ controller_projects:
   - name: config_as_code
     description: execution environments configurations
     organization: config_as_code
-    # scm_branch: master
+    scm_branch: homelab_test
     scm_clean: 'yes'
     scm_delete_on_update: 'no'
     scm_type: git
     scm_update_on_launch: 'yes'
-    scm_url: https://gitlab.w2bmh.example.opentlc.com/student1/workshop_project.git
+    scm_url: https://github.com/benblasco/aap-as-code.git
     credential: git
 ...
