@@ -3,13 +3,16 @@ all:
   children:
     automationcontroller:
       hosts:
-        student1.w2bmh.example.opentlc.com:
+        aap.opti.blasco.id.au:
+          ansible_host: 192.168.7.141
 
     automationhub:
       hosts:
-        hub-student1.w2bmh.example.opentlc.com:
+        aap.opti.blasco.id.au:
+          ansible_host: 192.168.7.141
 
     builder:
       hosts:
-        student1.w2bmh.example.opentlc.com:
+        aap.opti.blasco.id.au:
+          ansible_host: 192.168.7.141
 ...
