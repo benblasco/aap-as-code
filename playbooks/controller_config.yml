@@ -3,6 +3,11 @@
   hosts: all
   vars_files:
     - "../vault.yml"
+
+  # This is required when running AAP in containers
+  vars:
+    controller_configuration_async_dir: "/tmp/.ansible_async"
+
   connection: local
   tasks:
     - name: Include setting role
@@ -51,6 +56,7 @@
           ansible.builtin.set_fact:
             ah_token: "{{ ah_token['token'] }}"
           when: r_ah_token['changed']
+
       when: ah_token is not defined or ah_token['token'] is defined
 
     - name: Include credential_types role
