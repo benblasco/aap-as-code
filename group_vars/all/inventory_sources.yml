@@ -8,4 +8,13 @@ controller_inventory_sources:
     verbosity: 1
     overwrite: true
     overwrite_vars: true
+
+  - name: insights_inventory_source
+    source: insights
+    credential: insights_credential
+    inventory: insights_inventory
+    host_filter: '.*blasco.*'
+    verbosity: 1
+    overwrite: true
+    overwrite_vars: true
 ...

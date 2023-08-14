@@ -15,5 +15,5 @@ controller_projects:
     description: Red Hat Insights project
     organization: config_as_code
     scm_type: insights
-    credential: insights
+    credential: insights_credential
 ...

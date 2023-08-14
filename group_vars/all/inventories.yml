@@ -3,4 +3,8 @@ controller_inventories:
   - name: config_as_code
     organization: config_as_code
     description: inventory for configuring controller
+
+  - name: insights_inventory
+    organization: config_as_code
+    description: Insights inventory from dynamic source
 ...
