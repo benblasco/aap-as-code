@@ -10,4 +10,10 @@ controller_projects:
     scm_update_on_launch: 'yes'
     scm_url: https://github.com/benblasco/aap-as-code.git
     credential: git
+
+  - name: insights_project
+    description: Red Hat Insights project
+    organization: config_as_code
+    scm_type: insights
+    credential: insights
 ...
