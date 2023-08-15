@@ -7,11 +7,13 @@
 #   wait: true
 
 ah_repository_community:
+  url: https://galaxy.ansible.com/api/
   requirements:
     - infra.aap_utilities
     - infra.ee_utilities
     - containers.podman
     - awx.awx
+    - community.general
   wait: true
 
 ah_repository_certified:
