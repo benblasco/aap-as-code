@@ -30,4 +30,25 @@ controller_templates:
       - ah_token_user
       - vault
 
+  - name: test_rhelconfigure
+    job_type: run
+    inventory: insights_inventory
+    execution_environment: Default execution environment
+    project: fedoralaptop
+    playbook: rhel/rhelconfigure.yml
+    #credentials:
+      #- aap_admin
+      # - ah_token_user
+      #- vault
+
+  - name: test_rhelunregister
+    job_type: run
+    inventory: insights_inventory
+    execution_environment: Default execution environment
+    project: fedoralaptop
+    playbook: rhel/rhelunregister.yml
+    #credentials:
+      #- aap_admin
+      #- ah_token_user
+      #- vault
 ...
