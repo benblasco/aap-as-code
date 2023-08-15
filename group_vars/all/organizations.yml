@@ -8,6 +8,8 @@ controller_organizations:
     max_hosts: 0
     galaxy_credentials:
       - ah_certified
-      - ah_published
+      #- ah_published
       - ah_community
+      # This credential is required to pull community credentials
+      #- Ansible Galaxy
 ...
