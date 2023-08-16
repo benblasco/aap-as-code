@@ -26,5 +26,34 @@ controller_projects:
     scm_type: git
     scm_update_on_launch: 'yes'
     scm_url: https://github.com/benblasco/fedoralaptop.git
-    credential:
+
+  - name: fapolicyd-config
+    description: Shane Boulden File Access Policy Daemon configuration
+    organization: config_as_code
+    scm_branch: main
+    scm_clean: 'yes'
+    scm_delete_on_update: 'no'
+    scm_type: git
+    scm_update_on_launch: 'yes'
+    scm_url: https://github.com/shaneboulden/fapolicyd-config.git
+
+  - name: rhel-management
+    description: Ben's RHEL management content
+    organization: config_as_code
+    scm_branch: main
+    scm_clean: 'yes'
+    scm_delete_on_update: 'no'
+    scm_type: git
+    scm_update_on_launch: 'yes'
+    scm_url: https://github.com/benblasco/rhel-management.git
+
+  - name: vm-management
+    description: Ben's VM management content
+    organization: config_as_code
+    scm_branch: main
+    scm_clean: 'yes'
+    scm_delete_on_update: 'no'
+    scm_type: git
+    scm_update_on_launch: 'yes'
+    scm_url: https://github.com/benblasco/vm-management.git
 ...
