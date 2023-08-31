@@ -34,23 +34,28 @@ controller_templates:
     job_type: run
     inventory: insights_inventory
     execution_environment: Default execution environment
-    project: fedoralaptop
-    playbook: rhel/rhelconfigure.yml
+    project: rhel-management
+    playbook: rhelconfigure.yml
+    ask_limit_on_launch: true
     #credentials:
       #- aap_admin
-      # - ah_token_user
+      #- ah_token_user
       #- vault
 
   - name: test_rhelunregister
     job_type: run
     inventory: insights_inventory
     execution_environment: Default execution environment
-    project: fedoralaptop
-    playbook: rhel/rhelunregister.yml
+    project: rhel-management
+    playbook: rhelunregister.yml
+    ask_limit_on_launch: true
     #credentials:
       #- aap_admin
       #- ah_token_user
       #- vault
+    extra_vars:
+      ansible_user: bblasco
+      ansible_password: bblasco
 
   - name: configure_fapolicyd
     job_type: run
@@ -62,4 +67,9 @@ controller_templates:
       #- aap_admin
       #- ah_token_user
       #- vault
+    # Limit below defined as an artificial way to avoid running this on RHEL 7 hosts
+    limit: 'rhel[89]*'
+    extra_vars:
+      ansible_user: bblasco
+      ansible_password: bblasco
 ...
