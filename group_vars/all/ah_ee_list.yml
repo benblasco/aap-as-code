@@ -3,12 +3,31 @@ ee_list:
   - name: "config_as_code"
     collections:
       - name: infra.controller_configuration
+      # Note that we are specifying the version of this collection because there's a bug with the python 
+      # dependency in v2.x of the collection:
+      # https://github.com/ansible/galaxy_collection/blob/devel/bindep.txt
       - name: infra.ah_configuration
+        version: 1.1.1
       - name: infra.ee_utilities
       - name: infra.aap_utilities
       - name: awx.awx
 
+  - name: "test_inventory_source"
+    collections:
+      - name: community.libvirt
+    dependencies:
+      python:
+        python-libvirt
+
 ee_image_push: true
 ee_prune_images: false
 ee_create_ansible_config: false
+ee_validate_certs: false
+# Required to deal with bug documented below
+# When using the ee-supported Base Image, why does the build fail with the error "No package matches 'openshift-clients'"? 
+# https://access.redhat.com/solutions/6990615
+#ee_base_image: registry.redhat.io/ansible-automation-platform-23/ee-minimal-rhel8:latest
+ee_base_image: registry.redhat.io/ansible-automation-platform-23/ee-supported-rhel8:latest
+ee_base_registry_username: "{{ insights_user }}"
+ee_base_registry_password: "{{ insights_password }}"
 ...
