@@ -10,15 +10,14 @@ ah_repository_community:
   url: https://galaxy.ansible.com/api/
   # Note: We want to filter what gets pulled from galaxy
   # for reasons of space, security, and quality.
-  #requirements:
-    #- infra.aap_utilities
-    #- infra.ee_utilities
-    #- containers.podman
-    #- awx.awx
-    #- community.general
   # For posterity I am mentioning here that you cannot use roles with
   # private automation hub, only collections
-  requirements_file: ah_repository_community_requirements.yml
+  requirements:
+    - infra.aap_utilities
+    - infra.ee_utilities
+    - containers.podman
+    - awx.awx
+    - community.general
   wait: true
 
 ah_repository_certified:
