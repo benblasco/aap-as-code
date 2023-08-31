@@ -12,5 +12,6 @@ ah_validate_certs: false
 
 ee_registry_username: "{{ ah_username }}"
 ee_registry_password: "{{ ah_password }}"
-ee_registry_dest: "{{ ah_host }}:444"
+#ee_registry_dest: "{{ ah_host }}:444"
+ee_registry_dest: "{{ ah_host }}"
 ...
