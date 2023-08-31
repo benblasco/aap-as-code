@@ -1,15 +1,19 @@
 ---
 controller_execution_environments:
   - name: "supported"
-    image: aap.opti.blasco.id.au:444/ee-supported-rhel8
+    image: aapnew.opti.blasco.id.au:444/ee-supported-rhel8
     pull: "always"
     credential: "cr_ah"
   - name: "minimal"
-    image: aap.opti.blasco.id.au:444/ee-minimal-rhel8
+    image: aapnew.opti.blasco.id.au:444/ee-minimal-rhel8
     pull: "always"
     credential: "cr_ah"
   - name: "old_29_ee"
-    image: aap.opti.blasco.id.au:444/ee-29-rhel8
+    image: aapnew.opti.blasco.id.au:444/ee-29-rhel8
+    pull: "always"
+    credential: "cr_ah"
+  - name: "test_inventory_source"
+    image: aapnew.opti.blasco.id.au:444/test_inventory_source
     pull: "always"
     credential: "cr_ah"
 ...
