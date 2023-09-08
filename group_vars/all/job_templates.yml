@@ -30,32 +30,26 @@ controller_templates:
       - ah_token_user
       - vault
 
-  - name: test_rhelconfigure
+  - name: rhelconfigure
     job_type: run
-    inventory: insights_inventory
+    inventory: libvirt_inventory
     execution_environment: Default execution environment
     project: rhel-management
     playbook: rhelconfigure.yml
     ask_limit_on_launch: true
-    #credentials:
-      #- aap_admin
-      #- ah_token_user
-      #- vault
+    credentials:
+      - cr_rhel_ssh
+      - cr_rhelconfigure_vault
 
-  - name: test_rhelunregister
+  - name: rhelunregister
     job_type: run
     inventory: insights_inventory
     execution_environment: Default execution environment
     project: rhel-management
     playbook: rhelunregister.yml
     ask_limit_on_launch: true
-    #credentials:
-      #- aap_admin
-      #- ah_token_user
-      #- vault
-    extra_vars:
-      ansible_user: bblasco
-      ansible_password: bblasco
+    credentials:
+      - cr_rhel_ssh
 
   - name: configure_fapolicyd
     job_type: run
@@ -63,13 +57,8 @@ controller_templates:
     execution_environment: Default execution environment
     project: fapolicyd-config
     playbook: site.yml
-    #credentials:
-      #- aap_admin
-      #- ah_token_user
-      #- vault
+    credentials:
+      - cr_rhel_ssh
     # Limit below defined as an artificial way to avoid running this on RHEL 7 hosts
     limit: 'rhel[89]*'
-    extra_vars:
-      ansible_user: bblasco
-      ansible_password: bblasco
 ...
