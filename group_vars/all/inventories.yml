@@ -7,4 +7,8 @@ controller_inventories:
   - name: insights_inventory
     organization: config_as_code
     description: Insights inventory from dynamic source
+
+  - name: libvirt_inventory
+    organization: config_as_code
+    description: Libvirt inventory from home lab KVM hosts
 ...

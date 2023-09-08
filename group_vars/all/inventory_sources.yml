@@ -14,7 +14,31 @@ controller_inventory_sources:
     credential: insights_credential
     inventory: insights_inventory
     host_filter: '.*blasco.*'
-    verbosity: 1
+    verbosity: 2
+    overwrite: true
+    overwrite_vars: true
+    update_on_launch: true
+
+  - name: libvirt_nuc_inventory_source
+    source: scm
+    source_project: ansible-libvirt-inventory
+    source_path: inventory.libvirt.yml
+    inventory: libvirt_inventory
+    execution_environment: ee-libvirt-nuc
+    #host_filter: '.*blasco.*'
+    verbosity: 2
+    overwrite: true
+    overwrite_vars: true
+    update_on_launch: true
+
+  - name: libvirt_opti_inventory_source
+    source: scm
+    source_project: ansible-libvirt-inventory
+    source_path: inventory.libvirt.yml
+    inventory: libvirt_inventory
+    execution_environment: ee-libvirt-opti
+    #host_filter: '.*blasco.*'
+    verbosity: 2
     overwrite: true
     overwrite_vars: true
     update_on_launch: true
