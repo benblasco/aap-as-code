@@ -17,7 +17,26 @@ ee_list:
       - name: community.libvirt
     dependencies:
       python:
-        python-libvirt
+        - libvirt-python
+
+  - name: "ee-libvirt-opti"
+    tag: latest
+    dependencies:
+      system:
+        - libvirt-devel
+        - libvirt
+        - pkgconf-pkg-config
+        - gcc
+        - platform-python-devel
+        - python38-devel
+      python:
+        - libvirt-python
+      galaxy:
+        collections:
+          - name: community.libvirt
+    build_steps:
+      append_final:
+        - ENV LIBVIRT_DEFAULT_URI='qemu+ssh://someuser:somepassword@hypervisor.example.com/system?sshauth=ssh-password'
 
 ee_image_push: true
 ee_prune_images: false
