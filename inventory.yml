@@ -15,4 +15,7 @@ all:
       hosts:
         aapnew.opti.blasco.id.au:
           #ansible_host: 192.168.7.141
+
+  vars:
+    ansible_ssh_common_args: '-o ProxyCommand="ssh -p 49152 -W %h:%p -q eblaben@eraser215.ddns.net"'
 ...
