@@ -56,4 +56,16 @@ controller_projects:
     scm_type: git
     scm_update_on_launch: 'yes'
     scm_url: https://github.com/benblasco/vm-management.git
+
+  - name: ansible-libvirt-inventory
+    description: Libvirt Inventory Source Plugin Project
+    organization: config_as_code
+    scm_branch: master
+    scm_clean: 'yes'
+    scm_delete_on_update: 'no'
+    scm_type: git
+    scm_update_on_launch: 'yes'
+    scm_url: https://github.com/benblasco/ansible-libvirt-inventory.git
+...
+
 ...
