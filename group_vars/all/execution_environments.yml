@@ -16,4 +16,25 @@ controller_execution_environments:
     image: aapnew.opti.blasco.id.au:444/test_inventory_source
     pull: "always"
     credential: "cr_ah"
+
+  - name: "ee-libvirt-opti"
+    #image: aapnew.opti.blasco.id.au:444/ee-libvirt-opti
+    image: quay.io/rhn_sa_bblasco/ee-libvirt-opti:latest
+    #pull: "missing"
+    pull: "always"
+    #credential: "cr_ah"
+    credential: "cr_quay"
+
+  - name: "ee-libvirt-nuc"
+    #image: aapnew.opti.blasco.id.au:444/ee-libvirt-nuc
+    image: quay.io/rhn_sa_bblasco/ee-libvirt-nuc:latest
+    #pull: "missing"
+    pull: "always"
+    #credential: "cr_ah"
+    credential: "cr_quay"
+
+  - name: "quay_test_inventory_source"
+    image: quay.io/rhn_sa_bblasco/test_inventory_source:latest
+    #pull: "always"
+    credential: "cr_quay"
 ...
