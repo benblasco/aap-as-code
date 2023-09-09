@@ -61,4 +61,15 @@ controller_templates:
       - cr_rhel_ssh
     # Limit below defined as an artificial way to avoid running this on RHEL 7 hosts
     limit: 'rhel[89]*'
+
+  - name: rhel_harden_cis_l1
+    job_type: run
+    inventory: insights_inventory
+    execution_environment: Default execution environment
+    project: rhel-management
+    playbook: hardening/rhel9-playbook-cis_server_l1.yml
+    ask_limit_on_launch: true
+    credentials:
+      - cr_rhel_ssh
+...
 ...
