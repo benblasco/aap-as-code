@@ -18,20 +18,28 @@ controller_execution_environments:
     credential: "cr_ah"
 
   - name: "ee-libvirt-opti"
-    #image: aapnew.opti.blasco.id.au:444/ee-libvirt-opti
-    image: quay.io/rhn_sa_bblasco/ee-libvirt-opti:latest
+    image: aapnew.opti.blasco.id.au:444/ee-libvirt-opti:latest
+    credential: "cr_quay"
+    #image: quay.io/rhn_sa_bblasco/ee-libvirt-opti:latest
+    #credential: "cr_ah"
     #pull: "missing"
     pull: "always"
-    #credential: "cr_ah"
-    credential: "cr_quay"
 
   - name: "ee-libvirt-nuc"
-    #image: aapnew.opti.blasco.id.au:444/ee-libvirt-nuc
-    image: quay.io/rhn_sa_bblasco/ee-libvirt-nuc:latest
+    image: aapnew.opti.blasco.id.au:444/ee-libvirt-nuc:latest
+    credential: "cr_ah"
+    #image: quay.io/rhn_sa_bblasco/ee-libvirt-nuc:latest
+    #credential: "cr_quay"
     #pull: "missing"
     pull: "always"
-    #credential: "cr_ah"
-    credential: "cr_quay"
+
+  - name: "ee-libvirt-micro"
+    image: aapnew.opti.blasco.id.au:444/ee-libvirt-micro:latest
+    credential: "cr_ah"
+    #image: quay.io/rhn_sa_bblasco/ee-libvirt-micro:latest
+    #credential: "cr_quay"
+    #pull: "missing"
+    pull: "always"
 
   - name: "quay_test_inventory_source"
     image: quay.io/rhn_sa_bblasco/test_inventory_source:latest
