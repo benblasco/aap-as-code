@@ -89,11 +89,23 @@ controller_templates:
 
   - name: rhel_harden_cis_l1
     job_type: run
-    inventory: insights_inventory
+    inventory: libvirt_inventory
     execution_environment: Default execution environment
     project: rhel-management
     playbook: hardening/rhel9-playbook-cis_server_l1.yml
     ask_limit_on_launch: true
     credentials:
       - cr_rhel_ssh
+
+  - name: libvirt-newvm
+    job_type: run
+    inventory: hypervisor_inventory
+    execution_enviROnment: Default execution environment
+    project: vm-management
+    playbook: libvirt-newvm.yml
+    description: Create a new VM
+    ask_limit_on_launch: true
+    credentials:
+      - cr_hypervisor_ssh
+
 ...
