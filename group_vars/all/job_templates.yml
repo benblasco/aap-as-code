@@ -108,4 +108,13 @@ controller_templates:
     credentials:
       - cr_hypervisor_ssh
 
+  - name: malware_check
+    job_type: run
+    inventory: libvirt_inventory
+    execution_environment: Default execution environment
+    project: malware-playbooks
+    playbook: malware-check.yml
+    ask_limit_on_launch: true
+    credentials:
+      - cr_rhel_ssh
 ...
